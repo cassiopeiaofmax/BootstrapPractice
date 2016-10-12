@@ -1,0 +1,39 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>声明式触发手风琴</title>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <style>body{width: 300px; margin: 0 auto}</style>
+</head>
+<body>
+<div class="panel-group" id="myAccordion">
+    <div class="panel panel-info">
+        <div class="panel-heading">
+            <h4 class="panel-title" data-toggle="collapse" data-target="#panel1" data-parent="#myAccordion">标题一</h4>
+        </div>
+        <div class="panel-collapse collapse in" id="panel1">
+            <div class="panel-body">折叠区内容...</div>
+        </div>
+    </div>
+    <div class="panel panel-info">
+        <div class="panel-heading">
+            <h4 class="panel-title" data-toggle="collapse" data-target="#panel2" data-parent="#myAccordion">标题二</h4>
+        </div>
+        <div class="panel-collapse collapse" id="panel2">
+            <div class="panel-body">折叠区内容...</div>
+        </div>
+    </div>
+    <div class="panel panel-info">
+        <div class="panel-heading">
+            <h4 class="panel-title" data-toggle="collapse" data-target="#panel3" data-parent="#myAccordion">标题三</h4>
+        </div>
+        <div class="panel-collapse collapse" id="panel3">
+            <div class="panel-body">折叠区内容...</div>
+        </div>
+    </div>
+</div>
+<script src="http://libs.baidu.com/jquery/1.9.0/jquery.js"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>图片轮播</title>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <style>
+        body {
+            width: 580px;
+            margin: 0 auto
+        }
+    </style>
+</head>
+<body>
+<div class="carousel slide" id="slidershow" data-ride="carousel" data-pause="hover" data-interval="3000">
+    <!-- 设置图片轮播的顺序 -->
+    <ol class="carousel-indicators">
+        <li data-target="#slidershow" data-slide-to="0" class="active"></li>
+        <li data-target="#slidershow" data-slide-to="1"></li>
+        <li data-target="#slidershow" data-slide-to="2"></li>
+    </ol>
+    <!-- 设置轮播图片 -->
+    <div class="carousel-inner">
+        <div class="item active">
+            <a href="#"><img src="http://images3.c-ctrip.com/rk/201407/ll580x145.jpg"></a>
+            <!-- 图片对应标题和描述内容 -->
+            <div class="carousel-caption">
+                <h3>图片标题</h3>
+                <p>描述内容...</p>
+            </div>
+        </div>
+        <div class="item">
+            <a href="#"><img src="http://images3.c-ctrip.com/dj/201408/zj/zj_580145.jpg"></a>
+            <!-- 图片对应标题和描述内容 -->
+            <div class="carousel-caption">
+                <h3>图片标题</h3>
+                <p>描述内容...</p>
+            </div>
+        </div>
+        <div class="item">
+            <a href="#"><img src="http://images3.c-ctrip.com/dj/201408/zqgq_580145.jpg"></a>
+            <!-- 图片对应标题和描述内容 -->
+            <div class="carousel-caption">
+                <h3>图片标题</h3>
+                <p>描述内容...</p>
+            </div>
+        </div>
+    </div>
+    <!-- 设置轮播图片控制器 -->
+    <a class="left carousel-control" href="#slidershow" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left"></span>
+    </a>
+    <a class="right carousel-control" href="#slidershow" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right"></span>
+    </a>
+</div>
+<script src="http://libs.baidu.com/jquery/1.9.0/jquery.js"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
+<!--如果不用声明的触发方式（去掉 data-ride="carousel"、data-slide="prev"、data-slide="next"），还可以用js实现触发-->
+<script>
+    $(function () {
+        $("#slidershow").carousel({
+            interval: 3000
+        });
+        $("#slidershow a.left").click(function () {
+            $(".carousel").carousel("prev");
+        });
+        $("#slidershow a.right").click(function () {
+            $(".carousel").carousel("next");
+        });
+    });
+</script>
+</body>
+</html>
